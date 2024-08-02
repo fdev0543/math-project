@@ -12,7 +12,7 @@ son1.textContent = sonA; // sonA ni ekranga chiqarish
 
 //  ikkinchi son uchunni randam qilish uchun 
 const son2 = document.querySelector('#b');
-const sonB = Math.trunc(Math.random() * 40 + 1);
+const sonB = Math.trunc(Math.random() * 15 + 1);
 son2.textContent = sonB; // sonB ni ekranga chiqarish
 
 const ishora = document.querySelector('#amal') // ishora qismi uchu o`zgaruvchi
@@ -23,6 +23,7 @@ const sonD = document.querySelector('#d') // d 3-son uchun value
 button1.addEventListener('click', () => {
     ishora.textContent = `+`
     sonD.textContent = sonA + sonB
+
 })
 
 button2.addEventListener('click', () => {
@@ -30,22 +31,20 @@ button2.addEventListener('click', () => {
     sonD.textContent = sonA - sonB
 })
 
-button3.addEventListener('click', () => {
+button3.addEventListener('click', (e) => {
     ishora.textContent = `*`
     sonD.textContent = sonA * sonB
+    console.log(e);
 })
 
 button4.addEventListener('click', () => {
+    
     ishora.textContent = `/`
-    sonD.textContent = Math.trunc(sonA / sonB)
+    sonD.textContent = Math.floor(sonA / sonB)
+
 })
 
 
 
 
 
-
-console.log(sonA + sonB);
-console.log(sonA - sonB);
-console.log(sonA * sonB);
-console.log(Math.trunc(sonA / sonB));
